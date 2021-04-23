@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 15:14:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/23 17:05:20 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/23 17:20:33 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,27 +21,28 @@ template<class T> void fun(T const & elem)
 int main(void)
 {
 	{
-		int tab1[3] = {1, 2, 3};
+		int tab[3] = {1, 2, 3};
 
-		iter<int>(tab1, 3, fun<int>);
+		iter<int>(tab, 3, fun<int>);
 	}
 	std::cout << "------------------ " << __LINE__ << std::endl;
 	{
 		typedef char const * str;
-		str const tab2[4] = {"str1", "str2", "str3", "str4"};
+		str const tab[4] = {"str1", "str2", "str3", "str4"};
 
-		iter<str const>(tab2, 4, fun<str const>);
+		// Argument "3" is different from array's size on purpose.
+		iter<str const>(tab, 3, fun<str const>);
 	}
 	std::cout << "------------------ " << __LINE__ << std::endl;
 	{
-		std::string const tab2[4] = {"str1", "str2", "str3", "str4"};
+		std::string const tab[4] = {"str1", "str2", "str3", "str4"};
 
-		iter<std::string const>(tab2, 4, fun<std::string>);
+		iter<std::string const>(tab, 4, fun<std::string>);
 	}
 	std::cout << "------------------ " << __LINE__ << std::endl;
 	{
-		float const tab2[6] = {3.141592,-85.45,2.6589,9898,454.5231,7};
+		float const tab[6] = {3.141592,-85.45,2.6589,9898,454.5231,7};
 
-		iter<float const>(tab2, 6, fun<float>);
+		iter<float const>(tab, 6, fun<float>);
 	}
 }
