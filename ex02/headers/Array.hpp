@@ -52,7 +52,7 @@ template <class T> class Array
 		Array & operator=(Array const & src)
 		{
 			if (&src == this)
-				return ;
+				return (*this);
 			if (_size)
 				delete [] _tab;
 			_size = src._size;
@@ -62,6 +62,7 @@ template <class T> class Array
 				_tab = NULL;
 			for (unsigned int i = 0;i < _size;i++)
 				_tab[i] = src._tab[i];
+			return (*this);
 		};
 
 		T & operator[](unsigned int n) const
