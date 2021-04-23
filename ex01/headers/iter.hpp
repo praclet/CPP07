@@ -1,40 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 15:12:58 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/23 15:46:30 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/23 16:57:35 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-# define WHATEVER_HPP
+#ifndef ITER_HPP
+# define ITER_HPP
 
-template <class T> void swap (T & a, T & b)
+template<class T> void iter(T tab[], std::size_t size, void (*fun)(T const &))
 {
-	T tmp(a);
-
-	a = b;
-	b = tmp;
-}
-
-template <class T> T & min (T & a, T & b)
-{
-	if (a < b)
-		return (a);
-	else
-		return (b);
-}
-
-template <class T> T & max (T & a, T & b)
-{
-	if (a > b)
-		return (a);
-	else
-		return (b);
+	for (std::size_t i = 0;i < size;i++)
+		fun(tab[i]);
 }
 
 #endif

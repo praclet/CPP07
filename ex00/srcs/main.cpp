@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 15:14:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/23 15:39:57 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/23 15:50:02 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,25 @@
 int main(void)
 {
 	{
+		int a = 2;
+		int b = 3;
+		::swap( a, b );
+		std::cout << "a = " << a << ", b = " << b << std::endl;
+		std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+		std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+		std::string c = "chaine1";
+		std::string d = "chaine2";
+		::swap(c, d);
+		std::cout << "c = " << c << ", d = " << d << std::endl;
+		std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+		std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+	}
+	std::cout << "--------- " << __LINE__ << std::endl;
+	{
 		int a = 1;
 		int b = -2;
 		std::cout << "a: " << a << ", b: " << b << std::endl;
-		swaps<int>(a, b);
+		swap<int>(a, b);
 		std::cout << "a: " << a << ", b: " << b << std::endl;
 	}
 	std::cout << "--------- " << __LINE__ << std::endl;
@@ -27,7 +42,7 @@ int main(void)
 		float a = 1.1;
 		float b = -2.2;
 		std::cout << "a: " << a << ", b: " << b << std::endl;
-		swaps<float>(a, b);
+		swap<float>(a, b);
 		std::cout << "a: " << a << ", b: " << b << std::endl;
 	}
 	std::cout << "--------- " << __LINE__ << std::endl;
