@@ -6,13 +6,13 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 15:14:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/26 08:58:59 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/26 09:07:31 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <string>
 #include "Array.hpp"
-
 
 int main(void)
 {
@@ -107,4 +107,15 @@ int main(void)
 		}
 	}
 	std::cout << "********* " << __LINE__ << std::endl;
+	{
+		Array<std::string> tab(5);
+
+		tab[0] = "Zero";
+		tab[1] = "Un";
+		tab[2] = "Deux";
+		tab[3] = "Trois";
+		tab[4] = "Quatre";
+		for (unsigned int i=0;i < tab.size();i++)
+			std::cout << "tab[" << i << "] : '" << tab[i] << "'" << std::endl;
+	}
 }
