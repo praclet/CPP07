@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 15:14:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/23 17:20:33 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/26 12:35:00 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main(void)
 		typedef char const * str;
 		str const tab[4] = {"str1", "str2", "str3", "str4"};
 
-		// Argument "3" is different from array's size on purpose.
+		// Second argument "3" is different from array's size on purpose.
 		iter<str const>(tab, 3, fun<str const>);
 	}
 	std::cout << "------------------ " << __LINE__ << std::endl;

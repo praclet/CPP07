@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 15:14:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/26 09:07:31 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/26 12:32:58 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,5 +117,25 @@ int main(void)
 		tab[4] = "Quatre";
 		for (unsigned int i=0;i < tab.size();i++)
 			std::cout << "tab[" << i << "] : '" << tab[i] << "'" << std::endl;
+	}
+	std::cout << "********* " << __LINE__ << std::endl;
+	{
+		Array<Array<int> > tab(3);
+		Array<int> tmp(5);
+		Array<int> tmp1(3);
+
+		for (unsigned int i=0;i < tmp.size();i++)
+			tmp[i] = 8 * i + 5;
+		tab[0] = tmp;
+		for (unsigned int i=0;i < tmp.size();i++)
+			tmp[i] = 5 * i + 8;
+		tab[1] = tmp;
+		for (unsigned int i=0;i < tmp1.size();i++)
+			tmp1[i] = i + 10;
+		tab[2] = tmp1;
+		
+		for (unsigned int i=0;i < tab.size();i++)
+			for (unsigned int j=0;j < tab[i].size();j++)
+				std::cout << "tab[" << i << "][" << j << "] : '" << tab[i][j] << "'" << std::endl;
 	}
 }
