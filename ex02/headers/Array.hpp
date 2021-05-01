@@ -65,7 +65,14 @@ template <class T> class Array
 			return (*this);
 		};
 
-		T & operator[](unsigned int n) const
+		T & operator[](unsigned int n)
+		{
+			if (n < _size)
+				return (_tab[n]);
+			throw(std::range_error("Out of range access in Array"));
+		};
+
+		T const & operator[](unsigned int n) const
 		{
 			if (n < _size)
 				return (_tab[n]);

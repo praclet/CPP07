@@ -138,4 +138,13 @@ int main(void)
 			for (unsigned int j=0;j < tab[i].size();j++)
 				std::cout << "tab[" << i << "][" << j << "] : '" << tab[i][j] << "'" << std::endl;
 	}
+	/*
+	std::cout << "********* " << __LINE__ << std::endl;
+	{
+
+		Array<std::string> const tab(5);
+
+		tab[0] = "Zero";
+	}
+	*/
 }
