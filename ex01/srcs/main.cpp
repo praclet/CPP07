@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 15:14:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/26 12:35:00 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/05/02 08:19:42 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(void)
 	{
 		int tab[3] = {1, 2, 3};
 
-		iter<int>(tab, 3, fun<int>);
+		::iter<int>(tab, 3, fun<int>);
 	}
 	std::cout << "------------------ " << __LINE__ << std::endl;
 	{
@@ -31,18 +31,18 @@ int main(void)
 		str const tab[4] = {"str1", "str2", "str3", "str4"};
 
 		// Second argument "3" is different from array's size on purpose.
-		iter<str const>(tab, 3, fun<str const>);
+		::iter<str const>(tab, 3, fun<str const>);
 	}
 	std::cout << "------------------ " << __LINE__ << std::endl;
 	{
 		std::string const tab[4] = {"str1", "str2", "str3", "str4"};
 
-		iter<std::string const>(tab, 4, fun<std::string>);
+		::iter<std::string const>(tab, 4, fun<std::string>);
 	}
 	std::cout << "------------------ " << __LINE__ << std::endl;
 	{
 		float const tab[6] = {3.141592,-85.45,2.6589,9898,454.5231,7};
 
-		iter<float const>(tab, 6, fun<float>);
+		::iter<float const>(tab, 6, fun<float>);
 	}
 }

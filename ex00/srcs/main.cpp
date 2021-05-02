@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 15:14:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/26 10:00:37 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/05/02 08:22:03 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main(void)
 		int a = 1;
 		int b = -2;
 		std::cout << "a: " << a << ", b: " << b << std::endl;
-		swap<int>(a, b);
+		::swap<int>(a, b);
 		std::cout << "a: " << a << ", b: " << b << std::endl;
 	}
 	std::cout << "--------- " << __LINE__ << std::endl;
@@ -42,7 +42,7 @@ int main(void)
 		float a = 1.1;
 		float b = -2.2;
 		std::cout << "a: " << a << ", b: " << b << std::endl;
-		swap<float>(a, b);
+		::swap<float>(a, b);
 		std::cout << "a: " << a << ", b: " << b << std::endl;
 	}
 	std::cout << "--------- " << __LINE__ << std::endl;
@@ -50,32 +50,32 @@ int main(void)
 		int a = 1;
 		int b = -2;
 		std::cout << "a: " << a << ", b: " << b << std::endl;
-		std::cout << "min: " << min<int>(a, b) << std::endl;
-		std::cout << "min: " << min<int>(b, a) << std::endl;
+		std::cout << "min: " << ::min<int>(a, b) << std::endl;
+		std::cout << "min: " << ::min<int>(b, a) << std::endl;
 	}
 	std::cout << "--------- " << __LINE__ << std::endl;
 	{
 		float a = 1.1;
 		float b = -2.2;
 		std::cout << "a: " << a << ", b: " << b << std::endl;
-		std::cout << "min: " << min<float>(a, b) << std::endl;
-		std::cout << "min: " << min<float>(b, a) << std::endl;
+		std::cout << "min: " << ::min<float>(a, b) << std::endl;
+		std::cout << "min: " << ::min<float>(b, a) << std::endl;
 	}
 	std::cout << "--------- " << __LINE__ << std::endl;
 	{
 		int a = 1;
 		int b = -2;
 		std::cout << "a: " << a << ", b: " << b << std::endl;
-		std::cout << "max: " << max<int>(a, b) << std::endl;
-		std::cout << "max: " << max<int>(b, a) << std::endl;
+		std::cout << "max: " << ::max<int>(a, b) << std::endl;
+		std::cout << "max: " << ::max<int>(b, a) << std::endl;
 	}
 	std::cout << "--------- " << __LINE__ << std::endl;
 	{
 		float a = 1.1;
 		float b = -2.2;
 		std::cout << "a: " << a << ", b: " << b << std::endl;
-		std::cout << "max: " << max<float>(a, b) << std::endl;
-		std::cout << "max: " << max<float>(b, a) << std::endl;
+		std::cout << "max: " << ::max<float>(a, b) << std::endl;
+		std::cout << "max: " << ::max<float>(b, a) << std::endl;
 	}
 	return (0);
 }

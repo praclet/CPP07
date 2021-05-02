@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 15:14:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/26 12:32:58 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/05/02 08:17:59 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int main(void)
 {
 	{
-		Array<int> tab;
+		Array<int> const tab;
 
 		std::cout << "Size: " << tab.size() << std::endl;
 		try
@@ -43,7 +43,7 @@ int main(void)
 	}
 	std::cout << "********* " << __LINE__ << std::endl;
 	{
-		Array<float> tab(30);
+		Array<float> const tab(30);
 
 		std::cout << "Size: " << tab.size() << std::endl;
 		try
@@ -96,7 +96,7 @@ int main(void)
 		}
 		for (unsigned int i=0;i < tab1.size();i++)
 		{
-			tab1[i] = 2 * i;
+			tab1[i] = 3 * i;
 			std::cout << "tab1[" << i << "] : " << tab1[i] << std::endl;
 		}
 		tab0 = tab1;
