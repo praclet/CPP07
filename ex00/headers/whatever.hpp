@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 15:12:58 by praclet           #+#    #+#             */
-/*   Updated: 2021/05/02 08:22:22 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/05/02 10:05:06 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ template <class T> void swap (T & a, T & b)
 	b = tmp;
 }
 
-template <class T> T const & min (T & a, T & b)
+template <class T> T const & min (T const & a, T const & b)
 {
 	if (a < b)
 		return (a);
@@ -29,7 +29,7 @@ template <class T> T const & min (T & a, T & b)
 		return (b);
 }
 
-template <class T> T const & max (T & a, T & b)
+template <class T> T const & max (T const & a, T const & b)
 {
 	if (a > b)
 		return (a);

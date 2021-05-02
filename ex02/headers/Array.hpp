@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 17:22:33 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/23 17:53:21 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/05/02 10:39:21 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ template <class T> class Array
 		Array(unsigned int n) : _size(n)
 		{
 			if (_size)
-				_tab = new T[_size];
+				_tab = new T[_size]();
 			else
 				_tab = NULL;
 		};

@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 15:14:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/05/02 08:22:03 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/05/02 10:06:32 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int main(void)
 	}
 	std::cout << "--------- " << __LINE__ << std::endl;
 	{
-		int a = 1;
+		int const a = 1;
 		int b = -2;
 		std::cout << "a: " << a << ", b: " << b << std::endl;
 		std::cout << "min: " << ::min<int>(a, b) << std::endl;
@@ -55,8 +55,8 @@ int main(void)
 	}
 	std::cout << "--------- " << __LINE__ << std::endl;
 	{
-		float a = 1.1;
-		float b = -2.2;
+		float const a = 1.1;
+		float const b = -2.2;
 		std::cout << "a: " << a << ", b: " << b << std::endl;
 		std::cout << "min: " << ::min<float>(a, b) << std::endl;
 		std::cout << "min: " << ::min<float>(b, a) << std::endl;
